@@ -21,6 +21,14 @@ export interface Stock {
   market: string | null
 }
 
+export interface WatchlistItem {
+  id: number
+  ts_code: string
+  stock_name: string
+  note: string | null
+  created_at: string | null
+}
+
 export interface DailyQuote {
   ts_code: string
   trade_date: string

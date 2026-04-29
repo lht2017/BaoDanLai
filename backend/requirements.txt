@@ -19,9 +19,16 @@ httpx==0.28.1
 
 # 数据源
 tushare==1.4.21
-akshare==1.16.54
+akshare>=1.16.72
+
+# HTTP 请求（爬虫）
+requests>=2.31.0
+
+# 定时任务
+schedule>=1.2.0
 
 # 工具
 python-dotenv==1.1.0
 loguru==0.7.3
 cryptography==44.0.3
+psycopg2-binary>=2.9.9

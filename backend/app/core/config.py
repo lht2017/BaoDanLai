@@ -36,6 +36,9 @@ class Settings(BaseSettings):
     # 数据源
     TUSHARE_TOKEN: str = ""
 
+    # 爬虫
+    CRAWLER_REQUEST_DELAY: float = 0.5
+
     # 日志
     LOG_LEVEL: str = "INFO"
 

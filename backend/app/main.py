@@ -12,6 +12,7 @@ from app.core.config import get_settings
 from app.core.database import engine, Base
 from app.core.redis import close_redis
 from app.api.v1 import stocks, reviews, news
+from app.models.limit_up import LimitUpStock, MarketSentiment
 
 settings = get_settings()
 

@@ -10,11 +10,12 @@ import {
   addToWatchlist as apiAdd,
   removeFromWatchlist as apiRemove,
   type Stock,
+  type WatchlistItem,
 } from '../api'
 
 export const useStockStore = defineStore('stock', () => {
   const searchResults = ref<Stock[]>([])
-  const watchlist = ref<Stock[]>([])
+  const watchlist = ref<WatchlistItem[]>([])
   const loading = ref(false)
 
   async function search(keyword: string) {

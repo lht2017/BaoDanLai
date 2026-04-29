@@ -1,0 +1,27 @@
+# Web 框架
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+
+# 数据库
+sqlalchemy==2.0.41
+asyncpg==0.30.0
+alembic==1.15.2
+
+# Redis
+redis==5.3.1
+
+# 数据验证
+pydantic==2.11.3
+pydantic-settings==2.9.1
+
+# HTTP 客户端（调用 AI API）
+httpx==0.28.1
+
+# 数据源
+tushare==1.4.21
+akshare==1.16.54
+
+# 工具
+python-dotenv==1.1.0
+loguru==0.7.3
+cryptography==44.0.3

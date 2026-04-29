@@ -1,0 +1,31 @@
+# 爆单来 BaoDanLai — 开发环境 Docker Compose
+# 启动: docker-compose up -d
+# 停止: docker-compose down
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: baodanlai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: baodanlai
+      POSTGRES_PASSWORD: baodanlai_dev_2026
+      POSTGRES_DB: baodanlai
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+
+  redis:
+    image: redis:7-alpine
+    container_name: baodanlai-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
